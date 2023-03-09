@@ -39,7 +39,8 @@ class OpenWeather:
                 status=f"OK - status code: {data.status_code}",
             )
             return dictWeather
-        except:
+        except Exception as err:
+            print(f"Error: {err}")
             return dict(
                 temp=-999,
                 temp_min=-999,
